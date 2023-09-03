@@ -1,0 +1,23 @@
+
+connect "/usr/sbin/chat -v -f /etc/chatscripts/gprs"
+
+/dev/ttyS0
+
+# Speed of the serial line.
+921600
+
+nocrtscts
+
+debug
+
+nodetach
+ipcp-accept-local
+ipcp-accept-remote
+
+noipdefault
+
+defaultroute
+
+persist
+
+noauth

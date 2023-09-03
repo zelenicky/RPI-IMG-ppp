@@ -1,0 +1,69 @@
+Checking registration status...
+AT+CREG?
++CREG: 0,1
+OK
+
+The device is registered in home network.
+AT+CGREG?
++CGREG: 0,1
+OK
+
+The device is registered in home network.
+AT+CMEE=1
+OK
+
+Checking if device is already connected...
+AT+CGACT?
+
++CGACT: 1,0
++CGACT: 13,1
++CGACT: 14,0
++CGACT: 2,0
++CGACT: 3,0
++CGACT: 5,0
+OK
+
+Disconnected profile  13
+AT+CGACT=0, 13
+
+ERROR
+Command error..
+
+Close any previous connections...
+AT+CIPSHUT
+SHUT OK
+
+Attaching to network...
+AT+CGATT=1
+
+OK
+Device is successfully attached to the network
+Setting up APN for TCP connection...
+AT+CSTT="internet"
+
+OK
+APN setup for TCP connection successfull..
+Bring up Connection...
+AT+CIICR
+OK
+Connection bring up successfull..
+
+AT+CIFSR
+100.100.3.145
+
+Check if the device has local IP address 
+AT+CIFSR
+100.100.3.145
+
+Ping the server apicloud.sk
+
+AT+CIPPING=apicloud.sk
+
++CIPPING: 1,"213.160.164.88",192,61
++CIPPING: 2,"213.160.164.88",180,61
++CIPPING: 3,"213.160.164.88",143,61
++CIPPING: 4,"213.160.164.88",138,61
+
+
+OK
+Disconnecting port COM8.

@@ -1,0 +1,27 @@
+
+AT+IPR?
+
+sudo minicom --device /dev/ttyS0 --b 19200
+sudo minicom --device /dev/ttyS0 --b 38400
+sudo minicom --device /dev/ttyS0 --b 921600 // 
+
+                                      
+sudo minicom --device /dev/ttyS0
+ 
+
+
+AT+IPR=0
+//Autobaud support: (9600,19200,38400,57600,115200).
+
+AT+IPR=921600
+115200
+230400
+921600
+2900000
+ 
+ 
+ OK
+at+ipr=?
++IPR: (),(0,300,600,1200,2400,4800,9600,19200,38400,57600,115200,230400,921600,2000000,2900000,3000000,3200000,3686400,4000000)
+
+OK
